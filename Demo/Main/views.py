@@ -28,7 +28,7 @@ def upload_excel(request):
             model_fields.remove('id')
             if model_fields == df.columns.to_list():
                 save_data(df)
-                
+                formD.save()
             else:
                 return HttpResponse("DATA NOT MATCHED")
         else:
